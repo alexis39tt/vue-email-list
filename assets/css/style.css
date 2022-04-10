@@ -36,3 +36,35 @@ li:hover{
     color: white;
     margin: 10px 5px;
 }
+
+#loading div.loader{
+    display: inline-block;
+    animation: rotating 1s linear infinite;
+}
+
+#loading div.loader{
+    width: 100px;
+    height: 100px;
+    background: rgb(27, 27, 27);
+    border: 10px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+
+#loading div.loader div{
+    top: -10px;
+    left: 25px;
+    width: 30px;
+    height: 50px;
+    background: rgb(27, 27, 27);
+    position: absolute;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+}
+}

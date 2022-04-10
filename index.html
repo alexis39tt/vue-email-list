@@ -16,7 +16,10 @@
 <body>
     <div id="root">
         <ul>
-            <li v-show="emails.length == 10" v-for="email in emails">{{ email }}</li>
+            <div v-if="emails.length < 10" id="loading">
+                <div class="loader"><div></div></div>
+            </div>
+            <li v-else v-for="email in emails">{{ email }}</li>
         </ul>
     </div>
     <script defer src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
